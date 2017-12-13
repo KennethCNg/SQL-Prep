@@ -70,7 +70,7 @@ def large_neighbors
         FROM
           countries c2
         WHERE
-          c1.name != c2.name
+          c1.name = c2.name -- this gets you the SECOND greatest population
             AND c1.continent = c2.continent
       )
   SQL
